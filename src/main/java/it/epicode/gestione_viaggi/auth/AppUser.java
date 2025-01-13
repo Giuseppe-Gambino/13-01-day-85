@@ -3,6 +3,7 @@ package it.epicode.gestione_viaggi.auth;
 import jakarta.persistence.*;
 import lombok.Data;
 
+
 import java.util.Set;
 
 @Entity
