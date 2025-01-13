@@ -22,7 +22,7 @@ public class DipendenteController {
     private DipendenteSvc dipendenteSvc;
 
     @GetMapping
-    private ResponseEntity<List<Dipendente>> getAll(){
+    public ResponseEntity<List<Dipendente>> getAll(){
         return ResponseEntity.ok(dipendenteSvc.getAll());
     }
 

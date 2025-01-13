@@ -23,7 +23,7 @@ public class PrenotazioneController {
     private PrenotazioneSvc prenotazioneSvc;
 
     @GetMapping
-    private ResponseEntity<List<Prenotazione>> getAll(){
+    public ResponseEntity<List<Prenotazione>> getAll(){
         return ResponseEntity.ok(prenotazioneSvc.getAll());
     }
 

@@ -21,11 +21,13 @@ import java.util.List;
 public class ViaggioController {
     private final ViaggioSvc viaggioSvc;
 
-    @GetMapping
-    @PreAuthorize("isAuthenticated()")
-    private ResponseEntity<List<Viaggio>> getAll(){
+    @GetMapping("/viaggiAll")
+    @PreAuthorize("permitAll")
+    public ResponseEntity<List<Viaggio>> getAll(){
         return ResponseEntity.ok(viaggioSvc.getAll());
     }
+
+
 
     @GetMapping("/{id}")
     @PreAuthorize("isAuthenticated()")
