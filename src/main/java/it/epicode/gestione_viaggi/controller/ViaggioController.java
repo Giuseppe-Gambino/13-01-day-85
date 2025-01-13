@@ -48,13 +48,13 @@ public class ViaggioController {
 
     @PutMapping("/{id}")
     @PreAuthorize("hasRole('ADMIN')")
-    private ResponseEntity<?> edit(@PathVariable Long id, @Valid @RequestBody RequestViaggio d) {
+    public ResponseEntity<?> edit(@PathVariable Long id, @Valid @RequestBody RequestViaggio d) {
         return ResponseEntity.ok(viaggioSvc.edit(id, d));
     }
 
     @PatchMapping("/{id}")
     @PreAuthorize("hasRole('ADMIN')")
-    private ResponseEntity<?> edit(@PathVariable Long id, @Valid @RequestBody RequestCambioStato d) {
+    public ResponseEntity<?> edit(@PathVariable Long id, @Valid @RequestBody RequestCambioStato d) {
         return ResponseEntity.ok(viaggioSvc.editStato(id, d));
     }
 

@@ -46,7 +46,7 @@ public class PrenotazioneController {
 
     @PutMapping("/{id}")
     @PreAuthorize("isAuthenticated()")
-    private ResponseEntity<?> edit(@PathVariable Long id, @Valid @RequestBody RequestPrenotazione d) {
+    public ResponseEntity<?> edit(@PathVariable Long id, @Valid @RequestBody RequestPrenotazione d) {
         return ResponseEntity.ok(prenotazioneSvc.edit(id, d));
     }
 

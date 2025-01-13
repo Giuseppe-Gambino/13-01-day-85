@@ -45,7 +45,7 @@ public class DipendenteController {
 
     @PutMapping("/{id}")
     @PreAuthorize("isAuthenticated()")
-    private ResponseEntity<?> edit(@PathVariable Long id, @Valid @RequestBody RequestDipendente d) {
+    public ResponseEntity<?> edit(@PathVariable Long id, @Valid @RequestBody RequestDipendente d) {
         return ResponseEntity.ok(dipendenteSvc.edit(id, d));
     }
 
